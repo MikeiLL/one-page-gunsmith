@@ -1,6 +1,7 @@
 var $ = window.jQuery = window.$ = require('jquery');
 var velocity = require('velocity-animate');
 
+
 module.exports = function () {
     $('.section-1 .text')
         .velocity({
@@ -9,7 +10,8 @@ module.exports = function () {
         }, 0)
         .delay(100)
         .velocity({
-            top: '50%',
+            //top: '10%',
+            top: '0px',
             opacity: 1
         }, 600, 'easeOutCubic');
 };

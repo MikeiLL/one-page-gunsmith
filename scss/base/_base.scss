@@ -9,6 +9,22 @@ html {
     font-size: 16px;
 }
 
+hr {
+    height: 2px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 @media all and (min-width: 400px) {
     html {
         font-size: 22px;

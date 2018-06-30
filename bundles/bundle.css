@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../node_modules/normalize.css/normalize.css);
 @import url(../node_modules/font-awesome/css/font-awesome.css);
 @import url(../node_modules/fullpage.js/jquery.fullPage.css);
@@ -6,6 +7,8 @@
 @import url("https://fonts.googleapis.com/css?family=Cinzel:400,700,900");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Risque");
+@import url("https://fonts.googleapis.com/css?family=Acme");
 * {
   box-sizing: border-box;
 }
@@ -13,6 +16,22 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+}
+
+hr {
+  height: 2px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 @media all and (min-width: 400px) {
@@ -93,7 +112,39 @@ button, a {
 font-family: 'Cinzel', serif;
 font-family: 'Lato', sans-serif;
 font-family: 'Montserrat', sans-serif;
+font-family: 'Risque', cursive;
+font-family: 'Acme', sans-serif;
 */
+@font-face {
+  font-family: 'Ansley Display-Regular';
+  src: url("fonts/Ansley Display-Regular.eot");
+  src: url("fonts/Ansley Display-Regular.woff2") format("woff2"), url("fonts/Ansley Display-Regular.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AnsleyDisplay';
+  src: url("fonts/AnsleyDisplay.woff") format("woff"), url("fonts/AnsleyDisplay.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ansley Display-Bold';
+  src: url("fonts/Ansley Display-Bold.eot");
+  src: url("fonts/Ansley Display-Bold.woff2") format("woff2"), url("fonts/Ansley Display-Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AnsleyDisplay-Bold';
+  src: url("fonts/AnsleyDisplay-Bold.woff") format("woff"), url("fonts/AnsleyDisplay-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*
  * Modular Scale and Typi Mappings
  */
@@ -132,6 +183,15 @@ p {
     font-size: 118.75%;
     line-height: 1.3;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 h1 {
@@ -187,7 +247,6 @@ h2 {
 }
 
 h3 {
-  margin-bottom: 0;
   font-size: 1.2rem;
   line-height: 1.2;
 }
@@ -292,29 +351,278 @@ h6 {
 }
 
 .header {
+  color: #ffffef;
   width: 100%;
-  height: 60px;
-  line-height: 60px;
+  height: 30px;
+  line-height: 30px;
   padding: 0 20px;
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.9);
-  font-weight: bold;
+  background-color: #594335;
+  font-weight: 400;
   z-index: 1;
 }
 
+.header a {
+  color: inherit;
+}
+
+.header span {
+  font-size: .75rem;
+}
+
 .section-1 {
-  background-color: #EA9292;
+  background-color: #f5f4d6;
 }
 
 .section-1 .text {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  margin: 0 auto;
+  display: block;
+  position: relative;
   color: #fff;
   font-size: 2.5rem;
   white-space: nowrap;
+}
+
+.section-1 .text img {
+  margin: 0 auto;
+  display: block;
+}
+
+.section-1-top {
+  padding-top: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-wrapper, .tagline {
+  height: 75%;
+  padding: 0 1.5%;
+}
+
+.logo-wrapper {
+  float: left;
+  width: 60%;
+}
+
+.logo-wrapper .logo {
+  width: 100%;
+  margin: -40% 0;
+  transform: translateY(-50%);
+}
+
+.header__subtext {
+  font-family: 'Acme', sans-serif;
+  color: #594335;
+  font-size: 2.5rem;
+  position: relative;
+  left: -5px;
+}
+
+.tagline {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  font-family: 'Risque', cursive;
+  color: #594335;
+  width: 40%;
+  float: right;
+}
+
+.tagline h2, .tagline h4 {
+  text-align: right;
+}
+
+.address-wrapper {
+  clear: both;
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.hr-1-wrapper {
+  width: 100%;
+}
+
+.hr-1-wrapper img {
+  width: 65%;
+  height: 20px;
+  margin: 10px auto;
+  display: block;
+}
+
+.address {
+  color: #00795e;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.gunsmith {
+  background-color: #00795e;
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  font-family: cursive;
+  text-align: center;
+  width: 35%;
+  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 50%, 0% 0%);
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 50%, 0% 0%);
+  height: 65px;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: relative;
+  left: 50%;
+}
+
+.section-1-subsection-divider {
+  width: 90%;
+}
+
+.section-1-middle {
+  background-color: aqua;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  width: 100%;
+  height: 20vh;
+}
+
+.general-notice, .gunsmith-no-auto {
+  width: 50%;
+  padding: 0 1%;
+}
+
+.general-notice {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-size: calc(1vw + 1vh + .95vmin);
+}
+
+.gunsmith-no-auto {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+/*
+.gunsmith, .no-auto-notice {
+    width: 85%;
+}
+
+.gunsmith {
+    border: 4px groove #cdcdcd;
+    height: 30%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+*/
+.right-arrow {
+  width: 15px;
+}
+
+.no-auto-notice {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 3px solid #000;
+  border-radius: 6px;
+  text-align: center;
+  font-size: .75rem;
+  padding: 2%;
+}
+
+.no-auto-notice span {
+  display: block;
+  clear: both;
+  width: 100%;
+}
+
+.no-auto-notice .emoji {
+  width: 20px;
+}
+
+/* SECTION 1 SERVICES */
+.section-1-services {
+  padding-top: 1rem;
+}
+
+.services {
+  background-image: url("../images/60-lines.png");
+  background-color: yellow;
+  border: 1px solid #222;
+  margin: 0 auto;
+  padding: 10px 2%;
+  width: 80%;
+  transform: rotate(-2deg);
+  box-shadow: 6px 4px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.services-title {
+  text-align: center;
+}
+
+.services-list {
+  columns: 2;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-list li:before {
+  content: '√  ';
+}
+
+@media (min-width: 768px) {
+  .section-1-top {
+    height: auto;
+  }
+  .logo-wrapper, .tagline {
+    width: 100%;
+  }
+  .logo {
+    max-width: 45%;
+    margin: 0 auto !important;
+    display: block;
+    transform: translateY(0) !important;
+  }
+  .tagline {
+    margin: 1.4rem 0;
+  }
+  .header__subtext {
+    font-family: 'AnsleyDisplay-Bold';
+    color: #594335;
+    font-size: 2.5rem;
+  }
+  .general-notice {
+    width: 33.33%;
+  }
+  .general-notice span {
+    display: inline-block;
+    width: 87.5%;
+  }
+  .gunsmith-no-auto {
+    width: 66.66%;
+    -ms-flex-flow: row;
+        flex-flow: row;
+  }
+  .gunsmith {
+    height: 80%;
+  }
 }
 
 .section-2 {
