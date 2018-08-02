@@ -6,14 +6,32 @@
 }
 
 .section-1-top {
-    height:50vh;
+    height:60vh;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 36px;
     overflow: hidden;
     position: relative;
+}
+
+.section-top-bg-holder {
+    background: url('../images/stars-stripes-retro-yellow-removed.jpg');    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.logo-overlay {
+    background-color: rgba(255, 255, 255, .9);
+    z-index: 2;
 }
 
 /*
@@ -24,10 +42,10 @@
 }
 */
 .logo-wrapper {
-    flex: 1 0 auto;
     display: flex;
-    align-items: center;
-    width: 90%
+    flex:1 0 auto;
+    width: 75%;
+    z-index: 3;
 }
 
 .logo {
@@ -35,165 +53,99 @@
     width: 100%;
 }
 
-
 .logo path {
     fill: $primary-dark !important;
 }
 
-.tagline {
-    color: $primary-dark;
-    font-family: 'signpaintermedium', cursive;
-    font-size: 6vw;
-    text-align: right;
-    width: 33.33%;
-}
-
 .address {
-    margin-top: auto;
-    margin-left: 0;
-    margin-right: 0;
+    background-color: $primary-dark;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding:4px 0;
-    width: 100%;
-    display: inline-block;
-    white-space: nowrap;
-
-    color: $primary-dark;
+    height: 2rem;
     font-family: 'Domine', serif;
-    
-    //font-size: .85rem;
-    font-size: 3.9vw;
-    letter-spacing: 1px;
+    font-size: .85rem;
+    letter-spacing: 3px;
     font-weight: bold;
+    
+    position: relative; 
+    width: 100%;
+    z-index: 3;
 }
 
 .section-1-bottom {
-    background-color: $primary-dark;
     display:flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 40vh;
     overflow: hidden;
-    position: relative;
-}
-.info-wrapper {
-    height: 100%;
-    background-color: pink;
-    position: relative;
+    position: relative;    
 }
 
 .info {
+    align-items: center;
+    border: 2px solid $white;
+    display: flex;
+    flex:1 1 50%;
+    flex-flow: column;
     color: $white;
-    font-family: 'Domine', serif;
-    position: relative;
-    z-index: 0;
-    display: inline;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+
+    p { font-size: 110% !important; }
+
 }
 
-.info__text {
-    color: $white;
-    position: absolute;
-    z-index: 2;
+.info-1 {
+    background-color: $primary-red;
+    font-family: 'righteous', sans-serif;
+    font-size: 2rem !important;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.info-1-icon {
+    width: 20%;
+}
+
+.info-2 {
+    background-color: $primary-blue;   
+    
+}
+
+/*h3*/.locksmith-link-title {
     text-align: center;
 }
 
-.info__text--owner {
-    top: 12px;
-    font-size: 1.25rem;
+.key-icon {
+    height: auto;
+    margin: 0 auto;
+    width: 25%;
+    margin-top: 25px;
 }
 
-.info__text--gunsmithing {
-    bottom: 12px;
-    font-size: 1rem;
+.locksmith-link {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/*img*/.gunsmith-pic {
-    border: 1px solid $primary-bg;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: auto;
-    filter: brightness(0.7);
-    z-index: 1;
-    transform: translateX(-50%);
+.locksmith-link-title {
+    color: $white;
+    font-family: 'Artist-Modern', sans-serif;
+    font-size: 5.5rem;
+    
+    a { color: $white; }
 }
 
-@media (min-width: 650px) and (orientation: portrait) {
-    .logo-wrapper {
-        width: 80%;
-    }
-    .address {
-        font-size: 2.5vw;
-    }
-}
-
-@media (min-width: 768px) and (orientation: portrait){
-    .logo-wrapper {
-        width: 80%;
-    }
-    .address {
-        font-size: 2.5vw;
-    }
-    .info__text--owner {
-        font-size: 1.75rem;
-    }
-    .info__text--gunsmithing {
-        font-size: 1.25rem;          
-    }
-}
-
-@media (min-width: 960px) and (orientation: landscape) {
-    .logo-wrapper {
-        width: 70%;
-    }
-    .address {
-        font-size: 2vw;
-    }
-    .info__text--owner {
-        font-size: 1.75rem;
-    }
-    .info__text--gunsmithing {
-        font-size: 1.25rem;          
-    }
-
-}
-
-@media (min-width: 1024px) and (orientation: landscape) {
-    .logo-wrapper {
-        width: 65%;
-    }
-    .info-wrapper {
-        
-    }
-    .info__text--owner {
-        font-size: 1.85rem;
-    }
-    .info__text--gunsmithing {
-        font-size: 1.35rem;          
-    }
-}
-@media (min-width: 1200px) and (orientation: landscape) {
-    .logo-wrapper {
-        max-width: 827px;
-    }
-    .address {
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 1280px) and (orientation: landscape) {
-    .logo-wrapper {
-        width: 67.5%;
-    }
-    .address {
-        font-size: 1.5rem;
-    }
-    .info__text--owner {
-        font-size: 2rem;
-    }
-    .info__text--gunsmithing {
-        font-size: 1.5rem;          
-    }
+.locksmith-hand {
+    display: block;
+    margin: 0 auto;
+    width: 25%;
 }

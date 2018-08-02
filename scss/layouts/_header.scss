@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 .header {
-	background-color: $drkBrown; 
+	background-color: $primary-red; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     color: #ffffef;
     height: 36px;
     line-height: 36px;
