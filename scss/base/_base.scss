@@ -9,6 +9,15 @@ html {
     font-size: 16px;
 }
 
+header, .fullpage-wrapper {
+    max-width: 1350px;
+    }
+
+.fullpage-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 hr {
     height: 2px;
     width: 90%;
@@ -17,6 +26,11 @@ hr {
 
 a {
     text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding:0;
 }
 
 .group:after {

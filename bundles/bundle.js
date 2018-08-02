@@ -93,6 +93,7 @@ $(document).ready(function () {
     $('#btn-next').on('click', function () {
         $.fn.fullpage.moveSectionDown();
     });
+
 });
 
 function hideAnimatedItems() {
@@ -100,6 +101,7 @@ function hideAnimatedItems() {
         opacity: 0
     });
 }
+
 },{"./animations/section-1":1,"./animations/section-2":2,"./animations/section-3":3,"fullpage.js":5,"jquery":6}],5:[function(require,module,exports){
 /*!
  * fullPage 2.9.7

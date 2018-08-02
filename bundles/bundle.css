@@ -2,13 +2,7 @@
 @import url(../node_modules/normalize.css/normalize.css);
 @import url(../node_modules/font-awesome/css/font-awesome.css);
 @import url(../node_modules/fullpage.js/jquery.fullPage.css);
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
-@import url("https://fonts.googleapis.com/css?family=Nunito:300,400");
-@import url("https://fonts.googleapis.com/css?family=Cinzel:400,700,900");
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
-@import url("https://fonts.googleapis.com/css?family=Risque");
-@import url("https://fonts.googleapis.com/css?family=Acme");
+@import url("https://fonts.googleapis.com/css?family=Domine:400,700");
 * {
   box-sizing: border-box;
 }
@@ -16,6 +10,15 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+}
+
+header, .fullpage-wrapper {
+  max-width: 1350px;
+}
+
+.fullpage-wrapper {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 hr {
@@ -26,6 +29,11 @@ hr {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 .group:after {
@@ -54,9 +62,23 @@ button, a {
   -webkit-tap-highlight-color: transparent;
 }
 
+.section {
+  overflow: hidden;
+}
+
 .section .container {
   height: 100%;
   position: relative;
+}
+
+.section-title {
+  font-family: 'Domine', serif;
+  margin: 0;
+  position: absolute;
+  top: 7.5%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  white-space: nowrap;
 }
 
 .menu {
@@ -72,7 +94,7 @@ button, a {
 .menu li {
   width: 10px;
   height: 10px;
-  background-color: #fff;
+  background-color: #e97254;
   border-radius: 50%;
   margin-bottom: 30px;
 }
@@ -83,7 +105,7 @@ button, a {
 
 .menu li.active {
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 2px solid #e97254;
 }
 
 .menu li a {
@@ -108,41 +130,24 @@ button, a {
   font-size: 48px;
 }
 
-/* font-family: 'Nunito', sans-serif;
-font-family: 'Cinzel', serif;
-font-family: 'Lato', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Risque', cursive;
-font-family: 'Acme', sans-serif;
-*/
+/* CLARENDON ALT */
+/* font-family: 'Domine', serif; */
 @font-face {
-  font-family: 'Ansley Display-Regular';
-  src: url("fonts/Ansley Display-Regular.eot");
-  src: url("fonts/Ansley Display-Regular.woff2") format("woff2"), url("fonts/Ansley Display-Regular.eot?#iefix") format("embedded-opentype");
+  font-family: 'Artist-Modern';
+  src: url("../fonts/Artist-Modern.ttf.woff") format("woff"), url("../fonts/Artist-Modern.ttf.svg#Artist-Modern") format("svg"), url("../fonts/Artist-Modern.ttf.eot"), url("../fonts/Artist-Modern.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'AnsleyDisplay';
-  src: url("fonts/AnsleyDisplay.woff") format("woff"), url("fonts/AnsleyDisplay.ttf") format("truetype");
+  font-family: 'signpaintermedium';
+  src: url("../fonts/signpainter-housescript-webfont.woff2") format("woff2"), url("../fonts/signpainter-housescript-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Ansley Display-Bold';
-  src: url("fonts/Ansley Display-Bold.eot");
-  src: url("fonts/Ansley Display-Bold.woff2") format("woff2"), url("fonts/Ansley Display-Bold.eot?#iefix") format("embedded-opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'AnsleyDisplay-Bold';
-  src: url("fonts/AnsleyDisplay-Bold.woff") format("woff"), url("fonts/AnsleyDisplay-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+body {
+  font-family: 'Domine', serif;
 }
 
 /*
@@ -157,14 +162,15 @@ html {
 
 body,
 p {
-  font-size: 100%;
+  font-size: 75%;
   line-height: 1.3;
+  font-family: 'Domine', serif;
 }
 
 @media all and (min-width: 576px) {
   body,
   p {
-    font-size: 106.25%;
+    font-size: 75%;
     line-height: 1.3;
   }
 }
@@ -172,7 +178,7 @@ p {
 @media all and (min-width: 768px) {
   body,
   p {
-    font-size: 112.5%;
+    font-size: 81.25%;
     line-height: 1.3;
   }
 }
@@ -180,7 +186,7 @@ p {
 @media all and (min-width: 992px) {
   body,
   p {
-    font-size: 118.75%;
+    font-size: 87.5%;
     line-height: 1.3;
   }
 }
@@ -195,79 +201,79 @@ h6 {
 }
 
 h1 {
-  font-size: 1.728rem;
+  font-size: 2.37037rem;
   line-height: 1.2;
 }
 
 @media all and (min-width: 576px) {
   h1 {
-    font-size: 2.0736rem;
+    font-size: 2.37037rem;
     line-height: 1.2;
   }
 }
 
 @media all and (min-width: 768px) {
   h1 {
-    font-size: 2.48832rem;
+    font-size: 3.16049rem;
     line-height: 1.25;
   }
 }
 
 @media all and (min-width: 992px) {
   h1 {
-    font-size: 2.98598rem;
+    font-size: 4.21399rem;
     line-height: 1.25;
   }
 }
 
 h2 {
-  font-size: 1.44rem;
+  font-size: 1.77778rem;
   line-height: 1.2;
 }
 
 @media all and (min-width: 576px) {
   h2 {
-    font-size: 1.728rem;
+    font-size: 2.37037rem;
     line-height: 1.2;
   }
 }
 
 @media all and (min-width: 768px) {
   h2 {
-    font-size: 2.0736rem;
+    font-size: 3.16049rem;
     line-height: 1.2;
   }
 }
 
 @media all and (min-width: 992px) {
   h2 {
-    font-size: 2.48832rem;
+    font-size: 4.21399rem;
     line-height: 1.2;
   }
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.33333rem;
   line-height: 1.2;
 }
 
 @media all and (min-width: 576px) {
   h3 {
-    font-size: 1.44rem;
+    font-size: 1.77778rem;
     line-height: 1.2;
   }
 }
 
 @media all and (min-width: 768px) {
   h3 {
-    font-size: 1.728rem;
+    font-size: 2.37037rem;
     line-height: 1.2;
   }
 }
 
 @media all and (min-width: 992px) {
   h3 {
-    font-size: 2.0736rem;
+    font-size: 3.16049rem;
     line-height: 1.2;
   }
 }
@@ -279,27 +285,27 @@ h4 {
 
 @media all and (min-width: 576px) {
   h4 {
-    font-size: 1.2rem;
+    font-size: 1.33333rem;
     line-height: 1.1;
   }
 }
 
 @media all and (min-width: 768px) {
   h4 {
-    font-size: 1.44rem;
+    font-size: 1.77778rem;
     line-height: 1.1;
   }
 }
 
 @media all and (min-width: 992px) {
   h4 {
-    font-size: 1.728rem;
+    font-size: 2.37037rem;
     line-height: 1.1;
   }
 }
 
 h5 {
-  font-size: 0.83333rem;
+  font-size: 0.75rem;
   line-height: 1.4;
 }
 
@@ -312,26 +318,26 @@ h5 {
 
 @media all and (min-width: 768px) {
   h5 {
-    font-size: 1.2rem;
+    font-size: 1.33333rem;
     line-height: 1;
   }
 }
 
 @media all and (min-width: 992px) {
   h5 {
-    font-size: 1.44rem;
+    font-size: 1.77778rem;
     line-height: 1;
   }
 }
 
 h6 {
-  font-size: 0.69444rem;
+  font-size: 0.5625rem;
   line-height: 1.2;
 }
 
 @media all and (min-width: 576px) {
   h6 {
-    font-size: 0.83333rem;
+    font-size: 0.75rem;
     line-height: 1.2;
   }
 }
@@ -345,21 +351,24 @@ h6 {
 
 @media all and (min-width: 992px) {
   h6 {
-    font-size: 1.2rem;
+    font-size: 1.33333rem;
     line-height: 1;
   }
 }
 
 .header {
-  color: #ffffef;
-  width: 100%;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 20px;
-  position: fixed;
   background-color: #594335;
-  font-weight: 400;
+  color: #ffffef;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 10px;
+  position: fixed;
+  width: 100%;
   z-index: 1;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header a {
@@ -367,290 +376,339 @@ h6 {
 }
 
 .header span {
-  font-size: .75rem;
+  font-size: .6rem;
+  font-weight: 400;
+  font-family: 'Domine', serif;
+}
+
+@media (min-width: 526px) {
+  .header span {
+    font-size: .75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+  .header span {
+    font-size: .85rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .header span {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header span {
+    font-size: 1.25rem;
+  }
 }
 
 .section-1 {
   background-color: #f5f4d6;
-}
-
-.section-1 .text {
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  color: #fff;
-  font-size: 2.5rem;
-  white-space: nowrap;
-}
-
-.section-1 .text img {
-  margin: 0 auto;
-  display: block;
+  padding-top: 0 !important;
 }
 
 .section-1-top {
-  padding-top: 1rem;
-  overflow: hidden;
-  position: relative;
-}
-
-.logo-wrapper, .tagline {
-  height: 75%;
-  padding: 0 1.5%;
-}
-
-.logo-wrapper {
-  float: left;
-  width: 60%;
-}
-
-.logo-wrapper .logo {
-  width: 100%;
-  margin: -40% 0;
-  transform: translateY(-50%);
-}
-
-.header__subtext {
-  font-family: 'Acme', sans-serif;
-  color: #594335;
-  font-size: 2.5rem;
-  position: relative;
-  left: -5px;
-}
-
-.tagline {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
-  font-family: 'Risque', cursive;
-  color: #594335;
-  width: 40%;
-  float: right;
-}
-
-.tagline h2, .tagline h4 {
-  text-align: right;
-}
-
-.address-wrapper {
-  clear: both;
-  margin-top: 5px;
-  text-align: center;
-  width: 100%;
-}
-
-.hr-1-wrapper {
-  width: 100%;
-}
-
-.hr-1-wrapper img {
-  width: 65%;
-  height: 20px;
-  margin: 10px auto;
-  display: block;
-}
-
-.address {
-  color: #00795e;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.gunsmith {
-  background-color: #00795e;
-  color: #fff;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  font-family: cursive;
-  text-align: center;
-  width: 35%;
-  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 50%, 0% 0%);
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 50%, 0% 0%);
-  height: 65px;
-  -ms-flex-pack: center;
-      justify-content: center;
-  position: relative;
-  left: 50%;
-}
-
-.section-1-subsection-divider {
-  width: 90%;
-}
-
-.section-1-middle {
-  background-color: aqua;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row;
-      flex-flow: row;
-  width: 100%;
-  height: 20vh;
-}
-
-.general-notice, .gunsmith-no-auto {
-  width: 50%;
-  padding: 0 1%;
-}
-
-.general-notice {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  font-size: calc(1vw + 1vh + .95vmin);
-}
-
-.gunsmith-no-auto {
+  height: 50vh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column;
       flex-flow: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-pack: center;
+      justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  padding-top: 36px;
+  overflow: hidden;
+  position: relative;
 }
 
 /*
-.gunsmith, .no-auto-notice {
-    width: 85%;
-}
-
-.gunsmith {
-    border: 4px groove #cdcdcd;
-    height: 30%;
-    text-align: center;
+.logo-tagline-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-flow: row;
+    padding: 1% 2%;
 }
 */
-.right-arrow {
-  width: 15px;
+.logo-wrapper {
+  -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 90%;
 }
 
-.no-auto-notice {
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  border: 3px solid #000;
-  border-radius: 6px;
-  text-align: center;
-  font-size: .75rem;
-  padding: 2%;
-}
-
-.no-auto-notice span {
+.logo {
   display: block;
-  clear: both;
   width: 100%;
 }
 
-.no-auto-notice .emoji {
-  width: 20px;
+.logo path {
+  fill: #594335 !important;
 }
 
-/* SECTION 1 SERVICES */
-.section-1-services {
-  padding-top: 1rem;
+.tagline {
+  color: #594335;
+  font-family: 'signpaintermedium', cursive;
+  font-size: 6vw;
+  text-align: right;
+  width: 33.33%;
 }
 
-.services {
-  background-image: url("../images/60-lines.png");
-  background-color: yellow;
-  border: 1px solid #222;
-  margin: 0 auto;
-  padding: 10px 2%;
-  width: 80%;
-  transform: rotate(-2deg);
-  box-shadow: 6px 4px 5px 0px rgba(0, 0, 0, 0.75);
+.address {
+  margin-top: auto;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  padding: 4px 0;
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  color: #594335;
+  font-family: 'Domine', serif;
+  font-size: 3.9vw;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
-.services-title {
+.section-1-bottom {
+  background-color: #594335;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.info-wrapper {
+  height: 100%;
+  background-color: pink;
+  position: relative;
+}
+
+.info {
+  color: #ffffef;
+  font-family: 'Domine', serif;
+  position: relative;
+  z-index: 0;
+  display: inline;
+}
+
+.info__text {
+  color: #ffffef;
+  position: absolute;
+  z-index: 2;
   text-align: center;
 }
 
-.services-list {
-  columns: 2;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.info__text--owner {
+  top: 12px;
+  font-size: 1.25rem;
 }
 
-.services-list li:before {
-  content: '√  ';
+.info__text--gunsmithing {
+  bottom: 12px;
+  font-size: 1rem;
 }
 
-@media (min-width: 768px) {
-  .section-1-top {
-    height: auto;
+/*img*/
+.gunsmith-pic {
+  border: 1px solid #f5f4d6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+  z-index: 1;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 650px) and (orientation: portrait) {
+  .logo-wrapper {
+    width: 80%;
   }
-  .logo-wrapper, .tagline {
-    width: 100%;
+  .address {
+    font-size: 2.5vw;
   }
-  .logo {
-    max-width: 45%;
-    margin: 0 auto !important;
-    display: block;
-    transform: translateY(0) !important;
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .logo-wrapper {
+    width: 80%;
   }
-  .tagline {
-    margin: 1.4rem 0;
+  .address {
+    font-size: 2.5vw;
   }
-  .header__subtext {
-    font-family: 'AnsleyDisplay-Bold';
-    color: #594335;
-    font-size: 2.5rem;
+  .info__text--owner {
+    font-size: 1.75rem;
   }
-  .general-notice {
-    width: 33.33%;
+  .info__text--gunsmithing {
+    font-size: 1.25rem;
   }
-  .general-notice span {
-    display: inline-block;
-    width: 87.5%;
+}
+
+@media (min-width: 960px) and (orientation: landscape) {
+  .logo-wrapper {
+    width: 70%;
   }
-  .gunsmith-no-auto {
-    width: 66.66%;
-    -ms-flex-flow: row;
-        flex-flow: row;
+  .address {
+    font-size: 2vw;
   }
-  .gunsmith {
-    height: 80%;
+  .info__text--owner {
+    font-size: 1.75rem;
+  }
+  .info__text--gunsmithing {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .logo-wrapper {
+    width: 65%;
+  }
+  .info__text--owner {
+    font-size: 1.85rem;
+  }
+  .info__text--gunsmithing {
+    font-size: 1.35rem;
+  }
+}
+
+@media (min-width: 1200px) and (orientation: landscape) {
+  .logo-wrapper {
+    max-width: 827px;
+  }
+  .address {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) and (orientation: landscape) {
+  .logo-wrapper {
+    width: 67.5%;
+  }
+  .address {
+    font-size: 1.5rem;
+  }
+  .info__text--owner {
+    font-size: 2rem;
+  }
+  .info__text--gunsmithing {
+    font-size: 1.5rem;
   }
 }
 
 .section-2 {
-  background-color: #5cc2f1;
+  background-color: #f5f4d6;
 }
 
-.section-2 .text {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  color: #fff;
-  font-size: 2.5rem;
-  white-space: nowrap;
+.services__title {
+  color: #594335;
+}
+
+.services__list {
+  columns: 1;
+  list-style-type: none;
+  position: relative;
+  top: 17.5%;
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+}
+
+.services__list li::before {
+  content: '√';
+  margin-left: -5px;
+  margin-right: 5px;
+}
+
+.services__list li {
+  color: #594335;
+  font-size: 3.75vh;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 960px) and (orientation: landscape) {
+  .services__list {
+    columns: 2;
+  }
+  .services__list li {
+    font-size: 5.75vw;
+  }
+}
+
+@media (min-width: 1280px) and (orientation: landscape) {
+  .services__list li {
+    font-size: 2.75rem;
+    /* font-max-width doesn't exist, therefore,.. this is same as setting max-width.  */
+  }
 }
 
 .section-3 {
-  background-color: #565f77;
+  background-color: #0088a7;
+  color: #ffffef;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
 }
 
-.section-3 .text {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  color: #fff;
-  font-size: 2.5rem;
-  white-space: nowrap;
+.customer__title {
+  color: #ffffef;
+}
+
+.customer__reviews-wrapper {
+  margin-top: 2rem;
+  position: relative;
+  top: 17.5%;
+}
+
+.customer__review {
+  border: 2px solid #ffffef;
+  border-radius: 6px;
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+}
+
+.customer__headshot-name {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+}
+
+.customer__headshot {
+  width: 25%;
+}
+
+.customer__pic {
+  width: 100%;
+}
+
+.customer__name {
+  font-size: 1.4rem;
+  width: 75%;
+}
+
+.customer__stars-wrapper {
+  height: 30px;
+  overflow: none;
+}
+
+.customer__stars {
+  width: 40%;
+  height: 30%;
 }

@@ -49,6 +49,7 @@
 }
 
 .address {
+    //border: 1px solid pink;
     margin-top: auto;
     margin-left: 0;
     margin-right: 0;
@@ -78,9 +79,8 @@
     position: relative;
 }
 .info-wrapper {
-    height: 100%;
-    background-color: pink;
-    position: relative;
+    border: 1px solid $primary-bg;
+    width: 100%;
 }
 
 .info {
@@ -88,36 +88,49 @@
     font-family: 'Domine', serif;
     position: relative;
     z-index: 0;
-    display: inline;
+    height: 0;
+    padding-bottom: 66.66%;
+    width: 100%;
 }
 
-.info__text {
-    color: $white;
+.info-text {
+    font-size: 1rem;
     position: absolute;
     z-index: 2;
-    text-align: center;
 }
 
-.info__text--owner {
+.info-owner {
     top: 12px;
-    font-size: 1.25rem;
+    left: 12px;
 }
 
-.info__text--gunsmithing {
+.info-info {
     bottom: 12px;
-    font-size: 1rem;
+    right: 12px;
 }
 
 /*img*/.gunsmith-pic {
-    border: 1px solid $primary-bg;
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
     filter: brightness(0.7);
     z-index: 1;
-    transform: translateX(-50%);
+}
+
+@media (min-width: 421px) and (orientation: portrait){
+    .info-wrapper {
+        margin: 0 auto;
+        width: 85%;
+    }        
+}
+
+@media (min-width: 500px) and (orientation: portrait) {
+    .info-wrapper {
+        margin: 0 auto;
+        width: 65%;
+    }        
 }
 
 @media (min-width: 650px) and (orientation: portrait) {
@@ -126,6 +139,10 @@
     }
     .address {
         font-size: 2.5vw;
+    }
+    .info-wrapper {
+        margin: 0 auto;
+        width: 55%;
     }
 }
 
@@ -136,11 +153,9 @@
     .address {
         font-size: 2.5vw;
     }
-    .info__text--owner {
-        font-size: 1.75rem;
-    }
-    .info__text--gunsmithing {
-        font-size: 1.25rem;          
+    .info-wrapper {
+        margin: 0 auto;
+        width: 55%;
     }
 }
 
@@ -148,31 +163,22 @@
     .logo-wrapper {
         width: 70%;
     }
+    .info-wrapper {
+        width: 45%;
+    }
     .address {
         font-size: 2vw;
     }
-    .info__text--owner {
-        font-size: 1.75rem;
-    }
-    .info__text--gunsmithing {
-        font-size: 1.25rem;          
-    }
-
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
     .logo-wrapper {
-        width: 65%;
+        width: 67.5%;
     }
     .info-wrapper {
-        
+        width: 40%;
     }
-    .info__text--owner {
-        font-size: 1.85rem;
-    }
-    .info__text--gunsmithing {
-        font-size: 1.35rem;          
-    }
+    
 }
 @media (min-width: 1200px) and (orientation: landscape) {
     .logo-wrapper {
@@ -190,10 +196,7 @@
     .address {
         font-size: 1.5rem;
     }
-    .info__text--owner {
-        font-size: 2rem;
-    }
-    .info__text--gunsmithing {
-        font-size: 1.5rem;          
+    .info-wrapper {
+        width: 45%;
     }
 }

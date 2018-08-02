@@ -1,15 +1,58 @@
 @charset "UTF-8";
 
 .section-2 {
-    background-color: #5cc2f1;
-    .text {
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        color: #fff;
-        font-size: 2.5rem;
-        white-space: nowrap;
+    background-color: $primary-bg;
+}
+
+.services__title {
+    color: $primary-dark;
+}
+
+.services__list {
+    columns: 1;
+    //list-style-image: url('../images/checkmark.svg');
+    list-style-type: none;
+    position: relative;
+    top: 17.5%;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%; 
+}
+
+    .services__list li::before {
+        content: '√';   
+        margin-left: -5px;
+        margin-right: 5px;
     }
+
+    .services__list li {
+        color: $primary-dark;
+        font-size: 3.75vh;
+        margin-bottom: 1.25rem;
+    }
+
+
+@media (min-width: 768px) and (orientation: portrait) {
+    .services__list {
+        
+    }
+
+        .services__list li {
+
+        }
+}    
+
+@media (min-width: 960px) and (orientation: landscape) {
+    .services__list {
+        columns: 2;
+   }
+        .services__list li {
+            font-size: 5.75vw;
+        }
+}
+
+@media (min-width: 1280px) and (orientation: landscape) {
+        .services__list li {
+            font-size: 2.75rem; /* font-max-width doesn't exist, therefore,.. this is same as setting max-width.  */
+        }
 }
