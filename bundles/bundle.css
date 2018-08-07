@@ -620,10 +620,10 @@ h6 {
 }
 
 .section-2-bg-image {
-  background-image: url("../images/putting-gun-together.jpg");
+  background-image: url("../images/rick-rankin-gun-maintenance.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 0;
+  background-position: 80% 0;
 }
 
 .section-2-overlay {
@@ -632,6 +632,12 @@ h6 {
 
 .section-2-tagline {
   text-align: right;
+}
+
+@media (min-width: 992px) {
+  .section-2-bg-image {
+    background-position: 100% 0;
+  }
 }
 
 .section-3 {
