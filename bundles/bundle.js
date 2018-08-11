@@ -479,6 +479,11 @@ $(document).ready(function () {
     $('#btn-next').on('click', function () {
         $.fn.fullpage.moveSectionDown();
     });
+    
+    // move to next section when btn-next is clicked.
+    $('#to_services').on('click', function () {
+        $.fn.fullpage.moveSectionDown();
+    });
 
 });
 
