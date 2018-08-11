@@ -8,6 +8,7 @@ var executeAnimationOfSection2 = require('./animations/section-2');
 var executeAnimationOfSection3 = require('./animations/section-3');
 var executeAnimationOfSection4 = require('./animations/section-4');
 var executeAnimationOfSection5 = require('./animations/section-5');
+var executeAnimationOfSection6 = require('./animations/section-6');
 
 $(document).ready(function () {  
     // disable velocity mobileHA because it overrides the transform values we defined in stylesheets.
@@ -32,12 +33,16 @@ $(document).ready(function () {
                     executeAnimationOfSection3();
                     break;
                 case 4:
-                    $('#btn-next').hide();          // hide btn-next when reaching the last section.
+                    $('#btn-next').show();          // hide btn-next when reaching the last section.
                     executeAnimationOfSection4();
                     break;  
                 case 5:
-                    $('#btn-next').hide();          // hide btn-next when reaching the last section.
+                    $('#btn-next').show();          // hide btn-next when reaching the last section.
                     executeAnimationOfSection5();
+                    break;    
+                case 6:
+                    $('#btn-next').hide();          // hide btn-next when reaching the last section.
+                    executeAnimationOfSection6();
                     break;    
 
             }

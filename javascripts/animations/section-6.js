@@ -2,7 +2,7 @@ var $ = window.jQuery = window.$ = require('jquery');
 var velocity = require('velocity-animate');
 
 module.exports = function () {
-    $('.section-5 .text')
+    $('.section-6 .text')
         .velocity({
             translateX: '-50%',
             translateY: '-50%',
