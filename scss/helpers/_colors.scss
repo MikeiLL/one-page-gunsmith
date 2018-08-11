@@ -7,6 +7,7 @@ $drkGreen: #00795e;
 //$paleYellow: #f5f4d6;
 $orange: #e97254;
 $drkOrange: #c36545;
+$goldStar: #FCC204; /* RGB code: R: 252 G: 194 B: 4 */
 
 //$main-bg-color: #f3efca;
 $primary-bg: #f5f4d6;
@@ -14,5 +15,7 @@ $primary-dark: #212121;
 $primary-red: #9c3c46;
 $primary-blue: #0088a7;
 $notice-color: $orange;
+$notice: $notice-color;
+$highlight: $goldStar;
 
 

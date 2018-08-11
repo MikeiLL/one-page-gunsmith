@@ -1,57 +1,70 @@
 @charset "UTF-8";
 
 .section-4 {
-    background-color: $primary-blue;
-    color: $white;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    background-color: $primary-red;
+    padding-bottom: 2rem;
 }
 
-.customer__title {
+.section-4  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services__title {
     color: $white;
 }
 
-.customer__reviews-wrapper {
-    margin-top: 2rem;
+.services__list {
+    columns: 1;
+    //list-style-image: url('../images/checkmark.svg');
+    list-style-type: none;
     position: relative;
     top: 17.5%;
-    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%; 
 }
 
-.customer__review {
-    border: 2px solid $white;
-    border-radius: 6px;   
-    margin:0 10px;
-    padding-top: .5rem;
-    padding-bottom: 1rem;
+    .services__list li::before {
+        content: '√';   
+        margin-left: -5px;
+        margin-right: 5px;
+    }
+
+    .services__list li {
+        color: $white;
+        font-size: 3.75vh;
+        margin-bottom: 1.25rem;
+    }
+
+.curly-q-div {
+    margin-top: auto;
+    width: 25%;
+
 }
-    
-    .customer__headshot-name {
-        display: flex;
-        flex-flow: row;
+
+@media (min-width: 768px) and (orientation: portrait) {
+    .services__list {
+        
     }
 
-    .customer__headshot {
-        width: 25%;
-    }
+        .services__list li {
 
-        .customer__pic {
-            width: 100%;
         }
+}    
 
-    .customer__name {
-        font-size: 1.4rem;
-        width: 75%;
-    }    
-        .customer__review-content {
-            //font-size: .85rem;*/
-        }
+@media (min-width: 960px) and (orientation: landscape) {
+    .services__list {
+        columns: 2;
+   }
+        .services__list li {
+            font-size: 3.75vw;
+        } 
+}
 
-    .customer__stars-wrapper {
-        height: 30px;
-        overflow: none;
-    }
-        .customer__stars {
-            width: 40%;
-            height: 30%;
+@media (min-width: 1280px) and (orientation: landscape) {
+        .services__list li {
+            font-size: 2.75rem; /* font-max-width doesn't exist, therefore,.. this is same as setting max-width.  */
         }
+}

@@ -24,6 +24,11 @@ var uglify = require('gulp-uglify');
 gulp.task('compile-sass', function () {
     return gulp.src('scss/main.scss')
         .pipe(sass({
+        	includePaths: [
+				'node_modules/font-awesome/scss',
+				'node_modules/modularscale-sass/stylesheets',
+				'node_modules/typi/scss'
+			],
             outputStyle: 'expanded'
         }))
         .on('error', errorAlert)
@@ -37,7 +42,13 @@ gulp.task('compile-sass', function () {
 gulp.task('bundle-js', function () {
     return browserify({
         entries: [
-            'javascripts/main.js'
+            'javascripts/main.js',
+            'javascripts/animations/section-1.js',
+            'javascripts/animations/section-2.js',
+            'javascripts/animations/section-3.js',
+            'javascripts/animations/section-4.js',
+            'javascripts/google-places.js',
+            'javascripts/reviews.js'
         ],
         debug: true
     })
