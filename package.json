@@ -9,6 +9,7 @@
     "browserify-shim": "^3.8.12",
     "del": "^2.2.0",
     "factor-bundle": "^2.5.0",
+    "font-awesome": "^4.7.0",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-browserify": "^0.5.1",
@@ -19,6 +20,7 @@
     "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-uglify": "^1.5.3",
+    "modular-scale": "^5.1.0",
     "modularscale-sass": "^3.0.5",
     "run-sequence": "^1.1.5",
     "typi": "^3.2.0",
@@ -27,7 +29,6 @@
   },
   "dependencies": {
     "fitty": "^2.2.5",
-    "font-awesome": "^4.5.0",
     "fullpage.js": "^2.7.9",
     "jquery": "^3.3.1",
     "normalize.css": "^4.1.1",
