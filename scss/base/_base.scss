@@ -9,6 +9,11 @@ html {
     font-size: 16px;
 }
 
+a {
+    text-decoration: none;
+    transition: all .5s ease-out;
+}
+
 header, .fullpage-wrapper {
     max-width: 1400px;
     }

@@ -1,70 +1,144 @@
 @charset "UTF-8";
 
+.fp-viewing-section-4 .header {
+    border-bottom: 1px solid rgba(255,255,239, 0.5);
+}
+
 .section-4 {
-    background-color: $primary-red;
-    padding-bottom: 2rem;
-}
-
-.section-4  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.services__title {
+    background-color: $drkBrown;
     color: $white;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    //overflow: visible !important;
+    a {
+        color: darken($primary-bg, 15%);
+    }
+    a:hover {
+        color: lighten($primary-bg, 35%);
+    }
 }
 
-.services__list {
-    columns: 1;
-    //list-style-image: url('../images/checkmark.svg');
-    list-style-type: none;
-    position: relative;
-    top: 17.5%;
-    margin: 0 auto;
-    text-align: center;
-    width: 90%; 
+.container {
+    padding-top: .001em;    
 }
 
-    .services__list li::before {
-        content: '√';   
-        margin-left: -5px;
-        margin-right: 5px;
-    }
-
-    .services__list li {
-        color: $white;
-        font-size: 3.75vh;
-        margin-bottom: 1.25rem;
-    }
-
-.curly-q-div {
-    margin-top: auto;
-    width: 25%;
-
+.about-us__wrapper {
+   /* margin: 0 auto;
+    width: 80%; */
+    margin: 0 0 0 27px;
+    width: 92%;
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
-    .services__list {
-        
+.about__title {
+    color: $white;
+    top: 0%;
+}
+
+.about__main {
+    border: 2px solid $white;
+    display:none;
+    //display:block;
+    //margin: 0 auto 5% auto;
+    //width: 90%
+    margin:0 5px 5px 0;
+    float: left;
+    width: 50%;
+}
+
+.section-4 p {
+    font-size: 72.5%;
+    margin: 0 auto 12px auto;
+}
+
+@media (min-width: 375px) and (orientation: portrait) { /* iPHONE 7 */
+    .about-us__wrapper {
+        margin: 0 0 0 27px;
+        width: 90%;
+    }
+    .section-4 p {
+        font-size: 90%;
+        //font-size: 97.5%;
+    }
+}
+
+@media (min-width: 414px) {
+    .about__main {
+        display: block;
+    }
+}
+
+@media (min-width: 414px) and (orientation: portrait) { /* iPhone 7 Plus */
+    .about-us__wrapper {
+       /* margin: 0 auto;
+        width: 80%; */
+    }    
+
+    .about__main {
+        width: 50%;
     }
 
-        .services__list li {
+    .section-4 p {
+        font-size: 92.5; /* of typi base */
+    }
+}
 
-        }
-}    
+@media (min-width: 576px) {
+    .about__main {
+        width: 70%;
+    }   
+}
+
+@media (min-width: 600px) {
+    .about__main {
+        width: 50%;
+        float: none;
+        margin: 0 auto 20px auto;
+    }
+     .section-4 p {
+        font-size: 110%; /* of typi base */
+        margin: 0 0 20px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .about__main {
+        float: left;
+        width: 45%;
+        margin-right: 1rem;
+    }
+    
+    .about-us__wrapper {
+       margin: 0 auto;
+        width: 90%;
+    }
+    
+    .section-4 p {
+        font-size: 100%;    
+    }
+}
 
 @media (min-width: 960px) and (orientation: landscape) {
-    .services__list {
-        columns: 2;
-   }
-        .services__list li {
-            font-size: 3.75vw;
-        } 
+    .about__main {
+        float: left;
+        width: 45%;
+        margin-right: 1rem;
+    }
+    
+    .about-us__wrapper {
+       margin: 0 auto;
+        width: 90%;
+    }
+    
+    .section-4 p {
+        font-size: 80%;    
+    }
 }
 
-@media (min-width: 1280px) and (orientation: landscape) {
-        .services__list li {
-            font-size: 2.75rem; /* font-max-width doesn't exist, therefore,.. this is same as setting max-width.  */
-        }
+@media (min-width: 992) and (orientation: landscape ){
+    .about-us__wrapper {
+        width: 95%;
+    }
+    .section-4 p {
+        font-size: 85%;    
+    }
 }

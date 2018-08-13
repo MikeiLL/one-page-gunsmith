@@ -16,7 +16,7 @@
     color: $white;
     position: relative;
     z-index: 3;
-}
+} 
 
 .gunsmith-header {
     
@@ -30,11 +30,21 @@
     background-image: url('../images/rick-rankin-gun-maintenance.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 80% 0;
+    background-position: 60% 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
 }
 
 .section-2-overlay {
-    background-color: rgba(75,0,130, .2);
+    background-color: rgba( 0, 0, 0, .3);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
 }
 
 .section-2-tagline {
@@ -43,6 +53,6 @@
 
 @media (min-width: 992px) {
 	.section-2-bg-image {
-		background-position: 100% 0;
+		background-position: 0 50%;
 	}
 }

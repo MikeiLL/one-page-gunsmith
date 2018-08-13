@@ -6,7 +6,8 @@
 }
 
 .section-1-top {
-    height:60vh;
+    height: 50vh; 
+    //height:60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,6 +32,11 @@
 
 .logo-overlay {
     background-color: rgba(255, 255, 255, .9);
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     z-index: 2;
 }
 
@@ -39,18 +45,13 @@
 	cursor: pointer;
 }
 
-/*
-.logo-tagline-wrapper {
-    display: flex;
-    flex-flow: row;
-    padding: 1% 2%;
-}
-*/
 .logo-wrapper {
     display: flex;
     flex:1 0 auto;
-    width: 75%;
+    width: 95%;
+    //width: 75%;
     z-index: 3;
+    align-items: center;
 }
 
 .logo {
@@ -71,7 +72,8 @@
     text-align: center;
     height: 2rem;
     font-family: 'Domine', serif;
-    font-size: .85rem;
+    font-size: 2.25vw;
+    //font-size: .85rem;
     letter-spacing: 3px;
     font-weight: bold;
     
@@ -82,9 +84,9 @@
 
 .section-1-bottom {
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    height: 40vh;
+    height: 50vh;
     overflow: hidden;
     position: relative;    
 }
@@ -96,61 +98,171 @@
     flex:1 1 50%;
     flex-flow: column;
     color: $white;
-    height: 100%;
+   
+    height: 50%;
     align-items: center;
-    justify-content: center;
-    padding-bottom: 1rem;
+    justify-content: space-between;
+    padding-bottom: .75rem;
+    padding-top: .75rem;
+    //justify-content: center;
+    
+    //padding: 7.5% 0; /* landscape */
 
-    p { font-size: 110% !important; }
-
-}
+    p { 
+        font-size: 4.25vw;
+        //font-size: 110% !important;
+        margin-top: 0;
+    }
+}    
 
 .info-1 {
     background-color: $primary-red;
     font-family: 'righteous', sans-serif;
     font-size: 2rem !important;
     text-align: center;
-    padding-left: 10%;
-    padding-right: 10%;
+    //padding: 2%;
+    //padding-left: 10%;
+    //padding-right: 10%;
 }
 
-.info-1-icon {
+.info-1__icon {
     width: 20%;
+    //width: 50%; landscape
 }
 
 .info-2 {
     background-color: $primary-blue;   
-    
 }
 
 /*h3*/.locksmith-link-title {
     text-align: center;
 }
 
-.key-icon {
+.key-icon-top {
     height: auto;
     margin: 0 auto;
-    width: 25%;
-    margin-top: 25px;
+    width: 22.5%;
+    //width: 90%;
+    //width: 25%;
 }
 
-.locksmith-link {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+
+.locksmith-link, .locksmith-link > h3 {
+    
+    display: block;
+    
+        &:hover {
+            @include hover-scale;
+            .locksmith-link-title {
+                color: $notice;
+            }
+        }
+    }
 
 .locksmith-link-title {
     color: $white;
     font-family: 'Artist-Modern', sans-serif;
-    font-size: 5.5rem;
+    font-size: 4.5rem;
+    //font-size: 2.5rem;
+    //font-size: 5.5rem;
     
     a { color: $white; }
 }
 
 .locksmith-hand {
-    display: block;
+    display: none;
+    //display: block;
     margin: 0 auto;
-    width: 25%;
+    //width: 25%;
+    width: 35%;
 }
+
+@media (min-width: 414px) and (orientation: portrait) { /*iPHONE 7 */
+    .section-1-top {
+        height:50vh;
+    }
+    .section-1-bottom {
+        height:50vh;   
+    }
+    .key-icon-top {
+        width: 30%;
+    }
+}
+
+/*
+@media (min-width: 480px) and (orientation: portrait) {
+    .logo-wrapper {
+ 
+    }
+} */
+
+@media (min-width: 768px) and (orientation: portrait) { /*iPHONE 7 */
+    .section-1-bottom {
+        flex-direction: row;
+    }
+    .info {
+        height: 100%;
+        width: 50%;
+    }
+    .locksmith-link-title {
+        font-size: 5.5rem;
+    }
+    .key-icon-top {
+        width: 55%;
+    }
+
+    .info-1__icon {
+        width: 35%;
+    }
+}
+
+@media (min-width: 960px) and (orientation: landscape) {
+    .logo-wrapper {
+        width: 77.5%;
+    }
+    .section-1-top {
+        height: 60vh;
+    }
+    .address {
+        font-size: 1.75vw;
+    }
+    .section-1-bottom {
+        height: 40vh;
+    }
+    .info {
+        height: 100%;
+        justify-content: flex-start;
+        padding-top: 2%; /* ?? */
+    }
+    .info p {
+        font-size: 2.25vw;
+        width: 65%;
+        margin: 0 0 1rem 0;
+    }
+    
+    .info-1__icon {
+        width: 15%;
+    }
+    .key-icon-top {
+        margin-top: 0;
+        width: 22.5%;
+    }
+    .locksmith-link-title {
+        font-size: 5.65rem;
+    }
+    .info-2__icon {
+        width: 26.5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

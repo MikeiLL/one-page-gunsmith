@@ -5,53 +5,179 @@
     color: $white;
     padding-left: 1.5%;
     padding-right: 1.5%;
+    //overflow: visible !important;
 }
 
 .customer__title {
     color: $white;
 }
 
+.add-review-link {
+        color: $notice;
+        display: block;
+        margin: 0 auto 1rem auto;
+        position: relative;
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all .5s ease-out;
+        &:hover {
+            transform: scale(1.1);
+            transform-origin: center;
+            color: red;
+        };
+    }
+
 .customer__reviews-wrapper {
-    margin-top: 2rem;
-    position: relative;
-    top: 17.5%;
     display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    padding-top: 1rem;
 }
 
-.customer__review {
-    border: 2px solid $white;
-    border-radius: 6px;   
-    margin:0 10px;
-    padding-top: .5rem;
-    padding-bottom: 1rem;
-}
+/*img*/.google_review_user {
+    border: 6px solid $highlight;
+    border-radius: 50%;    
+    position: absolute;
+    top: .5rem;
+    left: .75rem;
+    transform: scale(.85);
+    transform-origin: top left;
+}  
+
+.review-item {
+    border: 2px solid #fefeff;
+    border-radius: 6px;
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    padding:.5rem .75% 1rem .75rem;
+    position: relative;
+    width: 100%;
     
-    .customer__headshot-name {
+    }
+
+    .review-meta {
         display: flex;
-        flex-flow: row;
+        flex-flow: column;
+        margin-left: auto;
+        width: 72%;
     }
 
-    .customer__headshot {
-        width: 25%;
+    .review-meta span {
+        text-align: right;
     }
 
-        .customer__pic {
-            width: 100%;
+        .review-author {
+            float: right;
+            font-size: 1.65rem;
+            white-space: normal;
         }
+        .review-sep { display: none; }
+        .review-date { font-size: 1.25rem; }
 
-    .customer__name {
-        font-size: 1.4rem;
-        width: 75%;
+.review-stars ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-top: 0;
+    width: 100%;
+}
+
+.review-stars ul li {
+    display: inline-block;
+    float: right;
+    margin-left: 6px;
+}
+
+.review-stars ul li i {
+    font-size: 18px !important;
+}
+
+.review-text {
+    color: $white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.star {
+    color: $highlight;
+}
+
+#schema {
+    clear: both;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 1%;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .customer__reviews-wrapper > div:nth-of-type(3),
+    .customer__reviews-wrapper > div:nth-of-type(4) {
+        display: none;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 991px) {
+    .customer__reviews-wrapper > div:nth-of-type(4) {
+        display: none;
+    }
+    .review-item {
+        margin: 0 10px;
+        width: 50%;
+    }
+}
+
+@media (min-width: 601px) {
+    /*img*/.google_review_user {
+        transform: scale(.675);
+    }
+    .customer__reviews-wrapper {
+        flex-direction: row;
     }    
-        .customer__review-content {
-            //font-size: .85rem;*/
-        }
-
-    .customer__stars-wrapper {
-        height: 30px;
-        overflow: none;
+    .review-author {
+        font-size: 1.25rem;
     }
-        .customer__stars {
-            width: 40%;
-            height: 30%;
-        }
+}
+
+@media (min-width: 768px) {
+/*img*/.google_review_user {
+        transform: scale(.85);
+    }
+    .review-author {
+        font-size: 1.65rem;
+    }
+
+}
+
+@media (min-width: 992px) {
+    /*img*/.google_review_user {
+        transform: scale(.65);
+    }
+
+    .review-item {
+        margin: 0 10px;
+        width: 33.33%;
+    }
+    .review-text {
+        margin-top: 0;
+    }
+    .review-stars {
+        margin:1rem 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    /*img*/.google_review_user {
+        transform: scale(.8);
+    }
+}
+
+
