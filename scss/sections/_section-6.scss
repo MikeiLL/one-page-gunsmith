@@ -73,12 +73,21 @@
 }
 
 .call-us {
-    margin: 10px 0 0 0;
+    //margin: 10px 0 0 0;
+    margin: 0;
     font-size: 1.5rem;
 }
 
+.tel {
+    color: $white;
+    display: inline-block;
+    font-size: .75rem;
+    position: relative;
+    top: -12px;
+}
+
 .key-icon-bottom {
-        width: 25%;
+    width: 25%;
     }
 
 .locksmith-link-bottom h3 {
@@ -94,6 +103,7 @@
     @media (max-width: 768px) {
         font-size: 1rem;
     }
+
 }
 
 @media (min-width: 768px) {
@@ -101,20 +111,57 @@
         display: flex;
         flex-direction: row;
     }
+    .bottom-cell-wrapper {
+        justify-content: flex-start;
+        padding-top: 2rem;
+    }
+
     .section-6-bottom-cell {
         height: 100%;
         max-height: 500px;
         width: 33.33%;
     }
-    .general-lock-notice{
-        font-size: 1.5rem;
+
+    .antique-gun-icon {
+        width: 175px;
     }
+
+    .general-lock-notice {
+        font-size: 1rem;
+    }
+
+    .phone-icon {
+        width: 20%;
+    }
+
+    .key-icon-bottom {
+        width: 45%;
+    }
+
     .call-us {
-        font-size: 3rem;       
+        font-size: 2.5rem;
     }
+
+    .tel {
+        font-size: 1.2rem;
+    }
+
+    .locksmith-link-bottom, .call-us, .general-lock-notice {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .locksmith-link-bottom h3 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+    
     .locksmith-hand {
         display: block;
-    }  
+    }
+    .footer__featured {
+        font-size: 3rem;
+    }
 }
 
 @media (min-width: 960px) and (orientation: landscape) {
@@ -130,6 +177,9 @@
     }
     .locksmith-hand {
         width: 25%;
+    }
+    .general-lock-notice{
+        font-size: 1.5rem;
     }
 
 }
