@@ -9,7 +9,7 @@
     color: $white;
     padding-left: 1.5%;
     padding-right: 1.5%;
-    //overflow: visible !important;
+    
     a {
         color: darken($primary-bg, 15%);
     }
@@ -18,8 +18,9 @@
     }
 }
 
-.container {
+.section-4 .container {
     padding-top: .001em;    
+    overflow-y: scroll;
 }
 
 .about-us__wrapper {
@@ -45,7 +46,7 @@
 }
 
 .section-4 p {
-    font-size: 85%;
+    font-size: 92.5%;
     margin: 0 auto 12px auto;
 }
 
@@ -55,7 +56,7 @@
         width: 90%;
     }
     .section-4 p {
-        font-size: 105%;
+        font-size: 100%;
     }
 }
 
@@ -72,7 +73,7 @@
     }
 
     .section-4 p {
-        font-size: 120%; /* of typi base */
+        font-size: 120%; 
     }
 }
 
@@ -88,7 +89,7 @@
         margin: 0 auto 20px auto;
     }
      .section-4 p {
-        font-size: 130%; /* of typi base */
+        font-size: 130%; 
         margin: 0 0 20px 0;
     }
 }
@@ -114,19 +115,7 @@
     
     .about-us__wrapper {
        margin: 0 auto;
-        width: 90%;
-    }
-    
-    .section-4 p {
-        font-size: 80%;    
+        width: 95%;
     }
 }
 
-@media (min-width: 992px) and (orientation: landscape ){
-    .about-us__wrapper {
-        width: 95%;
-    }
-    .section-4 p {
-        font-size: 100%;    
-    }
-}
