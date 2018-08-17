@@ -48,19 +48,20 @@
 .logo-wrapper {
     display: flex;
     flex:1 0 auto;
-    //width: 95%;
-    //width: 75%;
     height: 90%;
+    width: 100%;
     max-width: 100%;
     z-index: 3;
     align-items: center;
+    padding: .5rem;
 }
 
 .logo {
     display: block;
-    height: 100%;
-    margin: 0 auto;
     width: 90%;
+    height: auto;
+    max-height: 100%;
+    margin: 0 auto;    
 }
 
 .logo path {
@@ -74,10 +75,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 2rem;
+    height: 10%;
     font-family: 'Domine', serif;
     font-size: 2.25vw;
-    //font-size: .85rem;
     letter-spacing: 3px;
     font-weight: bold;
     
@@ -201,13 +201,6 @@
     }
 }
 
-/*
-@media (min-width: 480px) and (orientation: portrait) {
-    .logo-wrapper {
- 
-    }
-} */
-
 @media (min-width: 768px) { /*iPHONE 7 */
     .section-1-bottom {
         flex-direction: row;
@@ -239,6 +232,7 @@
     }
     .logo {
         height: 100%;
+        width: auto;
         margin: 0 auto;
     }
     .section-1-top {
